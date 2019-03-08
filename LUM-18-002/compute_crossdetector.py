@@ -2,7 +2,9 @@
 
 import os
 
+# Normtags to use
 normtags = ['hfoc18PAS', 'hfet18PAS', 'pcc18PAS', 'bcm1f18PAS', 'pltReproc18PAS']
+# JSON file defining the flat-top periods during the VdM scan that we use for the comparison
 json_file = "vdm2018.json"
 output_name = "temp.csv"
 
