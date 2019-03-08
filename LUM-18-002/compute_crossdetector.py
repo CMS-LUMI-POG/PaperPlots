@@ -3,14 +3,16 @@
 import os
 
 normtags = ['hfoc18PAS', 'hfet18PAS', 'pcc18PAS', 'bcm1f18PAS', 'pltReproc18PAS']
-#normtags = ['hfoc18v6', 'hfet18v6', 'pcc18v4', 'bcm1fpcvd18test14', 'pltzero18v4Reproc']
 json_file = "vdm2018.json"
 output_name = "temp.csv"
 
-# scale factors: new value from Olena divided by actual value used in normtag
+# Scale factors: these were needed with the old normtags to scale the result of the old normtags to the final
+# cross sections. Now that we actually have the final normtags with the final cross sections in them, these
+# aren't necessary any more.
 scale_factors = {'hfoc18v6': 805.9/803.99, 'hfet18v6': 2503.6/2508.09, 'pcc18v4': 5.982/5.99746, 'pltzero18v4Reproc': 261.8/259.98,
                  'bcm1fpcvd18test14': 197.84/198.53}
-scale_factors = {}
+
+# Output
 lumi = {}
 
 print "Getting lumi, please wait..."
